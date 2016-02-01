@@ -1,0 +1,21 @@
+These trees are very linear, each non-leaf node having a leaf on its left, and
+the rest of the tree on its right.
+
+For n=5:
+
+.----.----.----.---- 1
+ \    \    \    \
+  16   8    4    2
+
+For n=10:
+
+.----.----.----.----.----.----.----.----.---- 1
+ \    \    \    \    \    \    \    \    \
+  512  256  128  64   32   16   8    4    2
+
+The most frequent symbol is always encoded by a single bit, 0.
+The least frequent symbol is encoded by n bits, which are all 1's.
+
+The nth most frequent symbol is encoded by (n-1) 1's, followed by a 0. (Except
+for the least frequent symbol, which is encoded by n 1's and no 0.)
+

@@ -1,0 +1,11 @@
+For the special case in Exercise 2.71, encode-symbol runs in O(1) time for the
+most frequent symbol (whose encoding doesn't depend on n), and O(n) time for
+the least frequent symbol.
+
+Taking the memq calls into account, it still runs in O(1) time for the most
+frequent symbol (as the procedure happens to check the left branch before the
+more expensive right branch), and runs in O(n^2) time for the least frequent
+symbol. In this case, each memq call will be searching a list containing one
+less element as the tree is descended, for a total of n(n+1)/2 steps, which is
+O(n^2).
+
