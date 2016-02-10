@@ -1,0 +1,27 @@
+* Generic operations with explicit dispatch
+  * Adding a new type:
+    * Implement each operation for the new type
+    * Add a clause for the new type to each generic operation
+  * Adding a new operation:
+    * Implement the new operation for each type
+    * Add a new generic operation with a clause for each type
+
+* Data-directed style
+  * Adding a new type:
+    * Implement each operation for the new type
+    * Insert these implementations into the table using put
+  * Adding a new operation:
+    * Implement the new operation for each type
+    * Insert these implementations into the table using put
+
+* Message-passing style
+  * Adding a new type:
+    * Implement each operation for the new type in the dispatch procedure
+      within the constructor
+  * Adding a new operation:
+    * Implement the new operation for each type, as a clause in each type's
+      constructor
+
+It's easiest to add new types using message-passing style, and easiest to add
+new operations using data-directed style.
+
